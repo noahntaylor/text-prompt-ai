@@ -9,6 +9,7 @@ html, body {
 textarea {
   height: 100px;
   resize: none;
+  margin: 10px 0;
 }
 
 form {

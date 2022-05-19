@@ -47,8 +47,8 @@ function App() {
       const reply = await response.json();
 
       setResponses((prev) => [
-        ...prev,
         { input: prompt, response: reply.choices[0].text },
+        ...prev,
       ]);
 
       setIsLoading(false);
@@ -73,7 +73,7 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <main className="app">
       <div className="info-icon" onClick={changeShowPanel}>
         {showPanel ? (
           <FontAwesomeIcon
@@ -94,13 +94,12 @@ function App() {
         <h1>Text Prompt AI</h1>
         <form>
           <label htmlFor="prompt">Enter Prompt:</label>
-          <br />
           <textarea
             name="prompt"
             id="prompt"
+            placeholder='Enter Text Prompt - Try "Write a poem about dogs on skis"'
             onChange={(e) => updatePrompt(e.target.value)}
           ></textarea>
-          <br />
           <div className="button-container">
             <button className="button" onClick={submit}>
               Submit
@@ -110,8 +109,8 @@ function App() {
       </div>
       <h2>Responses:</h2>
       {isLoading ? <CircularProgress className="spinner" /> : null}
-      {responses.map((resp) => (
-        <div className="app-surface">
+      {responses.map((resp, i) => (
+        <div className="app-surface" key={i}>
           <p className="row">
             <span className="bold">Prompt:</span>
             <span>{resp.input}</span>
@@ -122,7 +121,7 @@ function App() {
           </p>
         </div>
       ))}
-    </div>
+    </main>
   );
 }
 

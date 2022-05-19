@@ -9,7 +9,7 @@ function InfoPanel(props) {
           <p className="paragraph">
             Text prompt AI accepts a text prompt and uses the OpenAI Completion
             AI to provide a meaningful response! Responses are displayed in a
-            list along with the associated prompts.
+            list along with their associated prompts.
           </p>
           <p className="list">A few suggestions:</p>
           <ul className="list">
