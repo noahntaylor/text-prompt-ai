@@ -46,19 +46,29 @@ function App() {
 
       const reply = await response.json();
 
-      setResponses((prev) => [
-        { input: prompt, response: reply.choices[0].text },
-        ...prev,
-      ]);
+      if (reply.choices) {
+        setResponses((prev) => [
+          { input: prompt, response: reply.choices[0].text },
+          ...prev,
+        ]);
+      } else {
+        setResponses((prev) => [
+          {
+            input: prompt,
+            response: "Something went wrong! Unable to access OpenAI.",
+          },
+          ...prev,
+        ]);
+      }
 
       setIsLoading(false);
     } catch {
       setResponses((prev) => [
-        ...prev,
         {
           input: prompt,
           response: "Something went wrong! Unable to access OpenAI.",
         },
+        ...prev,
       ]);
       setIsLoading(false);
     }
