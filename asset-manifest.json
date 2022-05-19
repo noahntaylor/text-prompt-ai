@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/text-prompt-ai/static/css/main.b002442b.css",
-    "main.js": "/text-prompt-ai/static/js/main.ac77dfab.js",
+    "main.js": "/text-prompt-ai/static/js/main.23b588a8.js",
     "index.html": "/text-prompt-ai/index.html",
     "main.b002442b.css.map": "/text-prompt-ai/static/css/main.b002442b.css.map",
-    "main.ac77dfab.js.map": "/text-prompt-ai/static/js/main.ac77dfab.js.map"
+    "main.23b588a8.js.map": "/text-prompt-ai/static/js/main.23b588a8.js.map"
   },
   "entrypoints": [
     "static/css/main.b002442b.css",
-    "static/js/main.ac77dfab.js"
+    "static/js/main.23b588a8.js"
   ]
 }
